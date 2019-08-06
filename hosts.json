@@ -1,0 +1,45 @@
+{
+    "control": {
+        "hosts": {
+            "localhost": {
+                "ansible_connection": "local"
+            }
+        }
+    },
+    "ubuntu": {
+        "hosts": {
+            "ubuntu1": null,
+            "ubuntu2": null,
+            "ubuntu3": null
+        },
+        "vars": {
+            "ansible_user": "packt",
+            "ansible_become": true,
+            "ansible_become_pass": "password"
+        }
+    },
+    "centos": {
+        "hosts": {
+            "centos3": null,
+            "centos2": null,
+            "centos1": null
+        },
+        "vars": {
+            "ansible_user": "root"
+        }
+    },
+    "linux": {
+        "children": {
+            "centos": null,
+            "ubuntu": null
+        },
+        "vars": {
+            "ansible_ssh_pass": "password"
+        }
+    },
+    "all": {
+        "vars": {
+            "ansible_connection": "ssh"
+        }
+    }
+}
