@@ -1,6 +1,12 @@
-[all]
+[centos]
 centos1 ansible_user=packt ansible_ssh_pass=password
+centos2 ansible_user=packt ansible_ssh_pass=password
+centos3 ansible_user=packt ansible_ssh_pass=password
+
+[ubuntu]
 ubuntu1 ansible_user=packt ansible_ssh_pass=password
+ubuntu2 ansible_user=packt ansible_ssh_pass=password
+ubuntu3 ansible_user=packt ansible_ssh_pass=password
 
 [all:vars]
 ansible_connection=ssh
