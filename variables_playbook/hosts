@@ -1,0 +1,15 @@
+[control]
+localhost
+
+[centos]
+centos[1:3]
+
+[centos:vars]
+ansible_user=root
+
+[ubuntu]
+ubuntu[1:3]
+
+[linux:children]
+centos
+ubuntu
